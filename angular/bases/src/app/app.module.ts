@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroesModule } from './heroes/heroes.module';
 import { ContadorModule } from './app-contador/contador.module';
+import { DragonballzModule } from './dragonballz/dragonballz.module';
 
 
 
@@ -18,6 +19,7 @@ import { ContadorModule } from './app-contador/contador.module';
     // para nuestro ejemplo: HeroesModule
     HeroesModule,
     ContadorModule,
+    DragonballzModule,
     BrowserModule
   ],
   providers: [],
