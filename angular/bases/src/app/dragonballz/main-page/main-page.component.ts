@@ -15,8 +15,8 @@ export class MainPageComponent {
 
   // la declaracion de este objeto se muda al componentes hijo agregar
   nuevo: Personaje = {
-    nombre: '',
-    poder: 0
+    nombre: 'Maestro Roshi',
+    poder: 1000
   }
 
   personajes: Personaje[] = [
@@ -43,7 +43,14 @@ export class MainPageComponent {
     //console.log(event);
   }
 
-  // este metodo se debe mudar al componente hijo Agregar para mantener la logica de negocio
+  agregarNuevoPersonaje(personaje:Personaje){
+    console.log('Main page component, recibo personaje: ',personaje);
+    
+    this.personajes.push(personaje);
+    console.log('se agrego a la lista: ',this.personajes);
+  }
+
+  // este metodo se ha mudado al componente hijo Agregar para mantener la logica de negocio
 
 /* agregar() {
     //console.log(this.nuevo);

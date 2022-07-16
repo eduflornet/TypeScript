@@ -20,8 +20,14 @@
             () escuchar eventos
             [(ngModel)] representa el concepto de two way databinding
             es decir emite como recibe propiedades o eventos
+
+            (onNuevoPersonaje)="agregarNuevoPersonaje()" voy a emitir desde el componente agregar hacia el componente mainPage 
          -->
-        <app-agregar [personajes]="personajes"></app-agregar>
+        <app-agregar 
+            [nuevo]="nuevo"
+            (onNuevoPersonaje)="agregarNuevoPersonaje($event)"
+            >
+        </app-agregar>
 
     </div>
 
