@@ -9,6 +9,7 @@
 
 
 # Angular
+- [app bases](https://github.com/eduflornet/TypeScript/tree/main/angular)
 
 
 
