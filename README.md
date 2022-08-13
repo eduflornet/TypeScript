@@ -9,13 +9,16 @@
 
 
 # Angular
-- [app bases](https://github.com/eduflornet/TypeScript/tree/main/angular)
+- [bases app](https://github.com/eduflornet/TypeScript/tree/main/angular/bases)
+- [gifs app](https://github.com/eduflornet/TypeScript/tree/main/angular/gifsApp)
 
 
 
 ## Referencias
 - [Estilos basicos CSS](https://gist.github.com/Klerith/3ddee04a27c09be05e888d5d4ac1d09f)
 - [Discutiendo el futuro de Protractor](https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49)
+- [Not null assertion operator '!'](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-0.html)
+- 
 
 
 
