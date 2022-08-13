@@ -1,0 +1,11 @@
+<div class="col">
+    <h3>Personajes</h3>
+    <hr>
+      <!-- Los pipes sirven para transformar visualmente la informacion -->
+    <ul>
+        <li *ngFor="let personaje of personajes; let i=index;">
+            {{ i + 1 }} - {{ personaje.nombre }} - {{ personaje.poder | number }}
+        </li>
+    </ul>
+
+</div>
