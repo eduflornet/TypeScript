@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+html , body {
+    height: 100%;
+}
+
+#sidebar {
+    height: 100%; /* el tamaño maximo que va a tener en la pantalla */
+    min-height: 100vh; /* el tamaño minimo que va a tener en la pantalla */
+    min-width: 100px;
+}
+
+
