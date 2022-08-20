@@ -20,7 +20,6 @@ import { GifsService } from '../services/gifs.service';
  buscar(){
   const valor = this.txtBuscar.nativeElement.value;
   this.gifsService.buscarGifs(valor);
-  console.log(valor);
   this.txtBuscar.nativeElement.value = '';
  }
 
