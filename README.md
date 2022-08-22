@@ -6,6 +6,9 @@
 - [Destructuring](https://www.stevefenton.co.uk/2018/01/deep-typescript-destructuring/)
 - [Decorators](https://www.typescriptlang.org/docs/handbook/decorators.html)
 - [Optional chaining](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-7.html)
+- [Router outlet](https://angular.io/api/router/RouterOutlet#description)
+- [routerLink](https://angular.io/api/router/RouterLink#description)
+- [RouterLinkActive](https://angular.io/api/router/RouterLinkActive#description)
 
 
 # Angular
