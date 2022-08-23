@@ -11,7 +11,7 @@
 - [RouterLinkActive](https://angular.io/api/router/RouterLinkActive#description)
 
 
-# Angular
+# Angular 13
 - [bases app](https://github.com/eduflornet/TypeScript/tree/main/angular/bases)
 - [gifs app](https://github.com/eduflornet/TypeScript/tree/main/angular/gifsApp)
 
