@@ -4,6 +4,11 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styles: [
+    `
+    li {
+      cursos:pointer;
+    } 
+    `
   ]
 })
 export class SidebarComponent implements OnInit {
