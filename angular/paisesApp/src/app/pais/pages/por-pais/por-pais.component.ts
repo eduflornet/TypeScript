@@ -9,12 +9,18 @@ import { PaisService } from '../../services/pais.service';
 })
 export class PorPaisComponent  {
   termino: string = '';
+  hayError:boolean = false;
   constructor(private paisService: PaisService) { }
 
   buscar(){
     console.log(this.termino);
-    this.paisService.buscarPais(this.termino).subscribe((resp) =>{
-      console.log('obtengo resp', resp);
+    this.hayError = false;
+    this.paisService.buscarPais(this.termino)
+    .subscribe((paises) =>{
+      console.log('obtengo resp', paises);
+    }, (err)=> {
+      this.hayError = true;
+      console.log('error:',err);
     });
   }
 
