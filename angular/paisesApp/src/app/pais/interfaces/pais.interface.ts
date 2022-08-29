@@ -1,142 +1,108 @@
 export interface Country {
-    data:       Datum[];
-    pagination: Pagination;
-    meta:       Meta;
+    name:         Name;
+    tld:          string[];
+    cca2:         string;
+    ccn3:         string;
+    cca3:         string;
+    cioc:         string;
+    independent:  boolean;
+    status:       string;
+    unMember:     boolean;
+    currencies:   Currencies;
+    idd:          Idd;
+    capital:      string[];
+    altSpellings: string[];
+    region:       string;
+    subregion:    string;
+    languages:    Languages;
+    translations: { [key: string]: Translation };
+    latlng:       number[];
+    landlocked:   boolean;
+    borders:      string[];
+    area:         number;
+    demonyms:     Demonyms;
+    flag:         string;
+    maps:         Maps;
+    population:   number;
+    gini:         Gini;
+    fifa:         string;
+    car:          Car;
+    timezones:    string[];
+    continents:   string[];
+    flags:        CoatOfArms;
+    coatOfArms:   CoatOfArms;
+    startOfWeek:  string;
+    capitalInfo:  CapitalInfo;
+    postalCode:   PostalCode;
 }
 
-export interface Datum {
-    type:                       Type;
-    id:                         string;
-    url:                        string;
-    slug:                       string;
-    bitly_gif_url:              string;
-    bitly_url:                  string;
-    embed_url:                  string;
-    username:                   Username;
-    source:                     string;
-    title:                      string;
-    rating:                     Rating;
-    content_url:                string;
-    source_tld:                 SourceTLD;
-    source_post_url:            string;
-    is_sticker:                 number;
-    import_datetime:            Date;
-    trending_datetime:          string;
-    images:                     Images;
-    user?:                      User;
-    analytics_response_payload: string;
-    analytics:                  Analytics;
+export interface CapitalInfo {
+    latlng: number[];
 }
 
-export interface Analytics {
-    onload:  Onclick;
-    onclick: Onclick;
-    onsent:  Onclick;
+export interface Car {
+    signs: string[];
+    side:  string;
 }
 
-export interface Onclick {
-    url: string;
+export interface CoatOfArms {
+    png: string;
+    svg: string;
 }
 
-export interface Images {
-    original:                 FixedHeight;
-    downsized:                The480_WStill;
-    downsized_large:          The480_WStill;
-    downsized_medium:         The480_WStill;
-    downsized_small:          DownsizedSmall;
-    downsized_still:          The480_WStill;
-    fixed_height:             FixedHeight;
-    fixed_height_downsampled: FixedHeight;
-    fixed_height_small:       FixedHeight;
-    fixed_height_small_still: The480_WStill;
-    fixed_height_still:       The480_WStill;
-    fixed_width:              FixedHeight;
-    fixed_width_downsampled:  FixedHeight;
-    fixed_width_small:        FixedHeight;
-    fixed_width_small_still:  The480_WStill;
-    fixed_width_still:        The480_WStill;
-    looping:                  Looping;
-    original_still:           The480_WStill;
-    original_mp4:             DownsizedSmall;
-    preview:                  DownsizedSmall;
-    preview_gif:              The480_WStill;
-    preview_webp:             The480_WStill;
-    hd?:                      DownsizedSmall;
-    "480w_still":             The480_WStill;
+export interface Currencies {
+    EUR: Eur;
 }
 
-export interface The480_WStill {
-    height: string;
-    width:  string;
-    size:   string;
-    url:    string;
+export interface Eur {
+    name:   string;
+    symbol: string;
 }
 
-export interface DownsizedSmall {
-    height:   string;
-    width:    string;
-    mp4_size: string;
-    mp4:      string;
+export interface Demonyms {
+    eng: Eng;
+    fra: Eng;
 }
 
-export interface FixedHeight {
-    height:    string;
-    width:     string;
-    size:      string;
-    url:       string;
-    mp4_size?: string;
-    mp4?:      string;
-    webp_size: string;
-    webp:      string;
-    frames?:   string;
-    hash?:     string;
+export interface Eng {
+    f: string;
+    m: string;
 }
 
-export interface Looping {
-    mp4_size: string;
-    mp4:      string;
+export interface Gini {
+    "2018": number;
 }
 
-export enum Rating {
-    G = "g",
-    PG13 = "pg-13",
+export interface Idd {
+    root:     string;
+    suffixes: string[];
 }
 
-export enum SourceTLD {
-    Empty = "",
-    WWWSimpsonsworldCOM = "www.simpsonsworld.com",
+export interface Languages {
+    spa: string;
 }
 
-export enum Type {
-    GIF = "gif",
+export interface Maps {
+    googleMaps:     string;
+    openStreetMaps: string;
 }
 
-export interface User {
-    avatar_url:    string;
-    banner_image:  string;
-    banner_url:    string;
-    profile_url:   string;
-    username:      Username;
-    display_name:  string;
-    description:   string;
-    instagram_url: string;
-    website_url:   string;
-    is_verified:   boolean;
+export interface Name {
+    common:     string;
+    official:   string;
+    nativeName: NativeName;
 }
 
-export enum Username {
-    Boomerangtoons = "boomerangtoons",
-    Empty = "",
+export interface NativeName {
+    spa: Translation;
 }
 
-export interface Meta {
-    status:      number;
-    msg:         string;
-    response_id: string;
+export interface Translation {
+    official: string;
+    common:   string;
 }
 
-export interface Pagination {
-    total_count: number;
-    count:       number;
-    offset:      number;
+export interface PostalCode {
+    format: string;
+    regex:  string;
 }
