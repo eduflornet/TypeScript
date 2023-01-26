@@ -5,7 +5,11 @@
     <div class="col">
         <!-- pais-input -->
         <!-- desde pais-input voy a emitir el termino y voy a llamar al metodo buscar -->
-            <app-pais-input (onEnter)="buscar($event)"></app-pais-input>
+            <app-pais-input 
+            (onEnter)="buscar($event)"
+            (onDebounce)="sugerencias($event)"
+            >
+        </app-pais-input>
         <!-- end pais-input -->
     </div>
 </div>

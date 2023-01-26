@@ -14,6 +14,7 @@ export class PorPaisComponent  {
   paises: Country [] = [];
   constructor(private paisService: PaisService) { }
 
+
   buscar(termino:string){
     // recibo como argumento el termino
     this.termino = termino;
@@ -28,6 +29,11 @@ export class PorPaisComponent  {
       this.paises = [];
       console.log('error:',err);
     });
+  }
+
+  sugerencias(termino: string){
+    this.hayError = false;
+    // TODO: crear sugerencias
   }
 
   
