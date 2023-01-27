@@ -17,6 +17,8 @@ export class PaisInputComponent implements OnInit  {
   // evento que se emite cuando se deja de escribir
   // con formularios reactivos ya viene integrado "debounce"
   @Output() onDebounce: EventEmitter<string> = new EventEmitter();
+  
+  @Input() placeholder: string = '';
 
   debouncer: Subject<string> = new Subject();
 

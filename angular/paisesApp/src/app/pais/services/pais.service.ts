@@ -17,4 +17,9 @@ export class PaisService {
     return this.http.get<Country[]>(url); // regreso un objeto de tipo observable, es decir quien llame a este metodo debera susbribirse
   }
 
+  buscarCapital(termino: string):Observable<Country[]> {
+    const url = `${this.apiUrl}/capital/${termino} `;
+    return this.http.get<Country[]>(url); // regreso un objeto de tipo observable, es decir quien llame a este metodo debera susbribirse
+  }
+
 }
