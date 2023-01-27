@@ -22,4 +22,9 @@ export class PaisService {
     return this.http.get<Country[]>(url); // regreso un objeto de tipo observable, es decir quien llame a este metodo debera susbribirse
   }
 
+  getPaisPorAlpha(id: string):Observable<Country> {
+    const url = `${this.apiUrl}/alpha/${id} `;
+    return this.http.get<Country>(url); // regreso un objeto de tipo observable, es decir quien llame a este metodo debera susbribirse
+  }
+
 }
