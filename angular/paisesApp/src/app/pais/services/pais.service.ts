@@ -9,6 +9,7 @@ import { Country } from '../interfaces/pais.interface';
 export class PaisService {
 
   private apiUrl: string = 'https://restcountries.com/v3.1/'
+  private apiUrl_v2: string = 'https://restcountries.com/v2/'
 
   constructor(private http: HttpClient) { }
 
@@ -24,6 +25,11 @@ export class PaisService {
 
   getPaisPorAlpha(id: string):Observable<Country[]> {
     const url = `${this.apiUrl}/alpha/${id} `;
+    return this.http.get<Country[]>(url); // regreso un objeto de tipo observable, es decir quien llame a este metodo debera susbribirse
+  }
+
+  buscarRegion(region:string): Observable<Country[]>{
+    const url = `${this.apiUrl_v2}/regionalbloc/${region} `;
     return this.http.get<Country[]>(url); // regreso un objeto de tipo observable, es decir quien llame a este metodo debera susbribirse
   }
 
